@@ -1,0 +1,149 @@
+PRISM-games
+===========
+
+Version: 2.0.beta3
+Date: Thu Mar 09 15:54:09 GMT 2017
+Hostname: MCL262830.local
+Memory limits: cudd=1g, java(heap)=910.5m
+Command line: prism comp_example.prism comp_example.props -prop 1 -multimaxciter 500 -multimaxditer 500 -paretoepsilon 0.001 -logcpareto -logdpareto -gs -exportmodel comp_example.all -exportstrat comp_example.strat
+
+Parsing model file "comp_example.prism"...
+
+Parsing properties file "comp_example.props"...
+
+4 properties:
+(1) "psi": comp("phi1", "phi2")
+(2) "phi1": <<1>> ((R{"r1"}/{"c"}<=v1 [ S ]=>R{"r2"}/{"c"}>=v2 [ S ]))
+(3) "phi2": <<1>> ((R{"r1"}/{"c"}<=v1 [ S ]&R{"r3"}/{"c"}<=v3 [ S ]))
+(4) "phi": <<1>> ((R{"r2"}/{"c"}>=v2 [ S ]&R{"r3"}/{"c"}<=v3 [ S ]))
+
+Type:        SMG
+Modules:     G1 G2 
+Variables:   s t 
+
+Switching to explicit engine, which supports SMGs...
+
+Building model...
+
+Computing reachable states... 3 states
+Reachable states exploration and model construction done in 0.081 secs.
+Sorting reachable states list...
+
+Computing reachable states... 3 states
+Reachable states exploration and model construction done in 0.067 secs.
+Sorting reachable states list...
+product construction took 0.002407 s
+
+Time for model construction: 0.167 seconds.
+
+Type:        SMG
+States:      8 (1 initial)
+Transitions: 20
+Choices:     0
+Max/avg:     0/0.00
+
+Exporting transition matrix in plain text format to file "comp_example.tra"...
+
+Error: Export of state rewards not yet supported by explicit engine.
+
+Error: Export of transition rewards not yet supported by explicit engine.
+
+Exporting list of reachable states in plain text format to file "comp_example.sta"...
+
+Exporting labels and satisfying states in plain text format to file "comp_example.lab"...
+
+Error: Cannot evaluate "comp" property on an atomic model..
+
+---------------------------------------------------------------------
+
+Model checking: "psi": comp("phi1", "phi2")
+Property constants: v1=0.25,v2=1.125,v3=0.75
+//////////////////////////////////////////////////////////////////////////////
+//                   STARTING COMPOSITIONAL MODEL CHECKING                  //
+//////////////////////////////////////////////////////////////////////////////
+
+Building Model ... 
+
+Computing reachable states... 3 states
+Reachable states exploration and model construction done in 0.052 secs.
+Sorting reachable states list...
+
+Computing reachable states... 3 states
+Reachable states exploration and model construction done in 0.059 secs.
+Sorting reachable states list...
+
+Reducing multi-objective query to CNF: R{"r1"}/{"c"}>v1 [ S ]|R{"r2"}/{"c"}>=v2 [ S ]
+
+Error loading Parma Polyhedra Library:
+java.lang.UnsatisfiedLinkError: no ppl_java in java.library.path
+
+Error: Parma Polyhedra Library could not be loaded/initialised.
+
+PRISM-games
+===========
+
+Version: 2.0.beta3
+Date: Thu Mar 09 15:54:13 GMT 2017
+Hostname: MCL262830.local
+Memory limits: cudd=1g, java(heap)=910.5m
+Command line: prism comp_example.prism comp_example.props -prop 4 -multimaxciter 500 -multimaxditer 500 -paretoepsilon 0.001 -logcpareto -gs -exportmodel comp_example.all -exportstrat comp_example_mono.strat
+
+Parsing model file "comp_example.prism"...
+
+Parsing properties file "comp_example.props"...
+
+4 properties:
+(1) "psi": comp("phi1", "phi2")
+(2) "phi1": <<1>> ((R{"r1"}/{"c"}<=v1 [ S ]=>R{"r2"}/{"c"}>=v2 [ S ]))
+(3) "phi2": <<1>> ((R{"r1"}/{"c"}<=v1 [ S ]&R{"r3"}/{"c"}<=v3 [ S ]))
+(4) "phi": <<1>> ((R{"r2"}/{"c"}>=v2 [ S ]&R{"r3"}/{"c"}<=v3 [ S ]))
+
+Type:        SMG
+Modules:     G1 G2 
+Variables:   s t 
+
+Switching to explicit engine, which supports SMGs...
+
+Building model...
+
+Computing reachable states... 3 states
+Reachable states exploration and model construction done in 0.074 secs.
+Sorting reachable states list...
+
+Computing reachable states... 3 states
+Reachable states exploration and model construction done in 0.064 secs.
+Sorting reachable states list...
+product construction took 0.003847 s
+
+Time for model construction: 0.155 seconds.
+
+Type:        SMG
+States:      8 (1 initial)
+Transitions: 20
+Choices:     0
+Max/avg:     0/0.00
+
+Exporting transition matrix in plain text format to file "comp_example.tra"...
+
+Error: Export of state rewards not yet supported by explicit engine.
+
+Error: Export of transition rewards not yet supported by explicit engine.
+
+Exporting list of reachable states in plain text format to file "comp_example.sta"...
+
+Exporting labels and satisfying states in plain text format to file "comp_example.lab"...
+
+Error: Cannot evaluate "comp" property on an atomic model..
+
+---------------------------------------------------------------------
+
+Model checking: "phi": <<1>> ((R{"r2"}/{"c"}>=v2 [ S ]&R{"r3"}/{"c"}<=v3 [ S ]))
+Property constants: v1=0.25,v2=1.125,v3=0.75
+
+Reducing multi-objective query to CNF: R{"r2"}/{"c"}>=v2 [ S ]&R{"r3"}/{"c"}<=v3 [ S ]
+
+Error loading Parma Polyhedra Library:
+java.lang.UnsatisfiedLinkError: no ppl_java in java.library.path
+
+Error: Parma Polyhedra Library could not be loaded/initialised.
+
